@@ -1,0 +1,44 @@
+<h2>Behavioral Health Data</h2>
+
+<div>
+  <!-- <label>
+    <input type="checkbox" #checkboxA (change)="filterProducts('Category A', checkboxA.checked)">
+    Category A
+  </label> -->
+  <!-- <label>
+    <input type="checkbox" #checkboxB (change)="filterProducts('Category B', checkboxB.checked)">
+    Category B
+  </label>
+  <label>
+    <input type="checkbox" #checkboxC (change)="filterProducts('Category C', checkboxC.checked)">
+    Category C
+  </label>
+  <label>
+    <input type="checkbox" #checkboxD (change)="filterProducts('Category D', checkboxD.checked)">
+    Category D
+  </label> -->
+  <!-- <label>
+    <input type="checkbox" #checkboxImproving (change)="filterProducts('Improving Relationships', checkboxImproving.checked)">
+    Improving Relationships
+  </label> -->
+  <label>
+    <input type="checkbox" #test (change)="filterProducts('Improving Relationships', test.checked)">
+    Improving Relationships
+  </label>
+  <label>
+    <input type="checkbox" #checkboxfamily (change)="filterProducts('family planning', checkboxfamily.checked)">
+    family planning  </label>
+  <label>
+    <input type="checkbox" #checkboxin (change)="filterProducts('in-person appointments', checkboxin.checked)">
+    in-person appointments  </label>
+  <label>
+    <input type="checkbox" #checkboxpersonal (change)="filterProducts('personal development', checkboxpersonal.checked)">
+    personal development  </label>
+</div>
+
+<div *ngFor="let product of products">
+  <div *ngIf="productMatchesSelectedCategories(product)">
+    {{ product.name }} 
+    <!-- - {{ product.category }} -->
+  </div>
+</div>
